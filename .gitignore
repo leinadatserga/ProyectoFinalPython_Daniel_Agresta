@@ -212,3 +212,5 @@ __marimo__/
 *_temp.html
 *_copy.html
 
+# Archivos de staticfiles de Django
+staticfiles/
