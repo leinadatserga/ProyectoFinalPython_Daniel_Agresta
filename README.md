@@ -25,7 +25,9 @@ Un sistema integral de gestión de clientes y productos desarrollado con Django 
 ```
 ProyectoFinal_Daniel_Agresta/
 ├── db.sqlite3
+├── .gitignore
 ├── manage.py
+├── README.md
 ├── requirements.txt
 ├── ecommerce/
 │   ├── models.py
@@ -57,7 +59,9 @@ ProyectoFinal_Daniel_Agresta/
 │   ├── administracion_usuarios.css
 │   ├── about.css
 │   └── search.css
-└── media/
+├── .venv/
+├── staticfiles/
+└── media/avatars
 ```
 
 ## Instalación y Configuración
