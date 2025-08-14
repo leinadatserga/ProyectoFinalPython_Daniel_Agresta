@@ -1,0 +1,26 @@
+{% extends 'commerce/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block nav_about %}class="active"{% endblock %}
+
+{% block content %}
+<div class="about-container">
+	<h1>Acerca de este proyecto</h1>
+	<h3>Desde 2015, me dedico a gestionar mi propia empresa de instalación de sistemas de seguridad. A lo largo de estos
+		años, la experiencia me ha permitido identificar necesidades clave para optimizar el trabajo diario. <br> Este
+		gestor nace precisamente de una de ellas: la importancia de tener centralizado el manejo básico de productos y
+		clientes, facilitando la organización y el acceso rápido a la información esencial. <br>
+
+		Con esta herramienta, busco simplificar procesos, ahorrar tiempo y mejorar la eficiencia en la gestión
+		empresarial, para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio. <br>
+
+		Bienvenido/a a una solución pensada desde la práctica, para la práctica.</h3>
+	<p>Este proyecto es una plataforma de ejemplo desarrollada con Django para la gestión de usuarios, productos y más.
+	</p>
+	<p>Puedes navegar libremente por la sección About sin necesidad de iniciar sesión.</p>
+</div>
+{% endblock %}

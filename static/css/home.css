@@ -1,0 +1,89 @@
+/* Estilos para la página de inicio */
+
+.welcome-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.welcome-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section .estado-activo {
+    color: #27ae60;
+}
+
+.welcome-section .estado-inactivo {
+    color: #e74c3c;
+}
+
+.welcome-section .aviso {
+    background: #fff3cd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    font-weight: bold;
+}
+
+.instructions {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.instructions h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.instructions ul {
+    margin-bottom: 1.5rem;
+}
+
+.instructions li {
+    margin-bottom: 0.5rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    flex: 1 1 220px;
+    background: #f4f6f8;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    min-width: 220px;
+}
+
+.feature-card h4 {
+    color: #2980b9;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    margin-bottom: 0.5rem;
+}
+
+.requiere-login {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    font-style: italic;
+}

@@ -1,0 +1,58 @@
+{% extends 'commerce/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block title %}Crear Cliente - Gestor de e-commerce{% endblock %}
+
+{% block nav_crear_cliente %}class="active"{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>➕ Crear Nuevo Cliente</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label }} <span class="required">*</span></label>
+            {{ form.name }}
+            <div class="help-text">Máximo 100 caracteres</div>
+            {% if form.name.errors %}
+                {% for error in form.name.errors %}
+                    <div class="message error">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.age.id_for_label }}">{{ form.age.label }} <span class="required">*</span></label>
+            {{ form.age }}
+            <div class="help-text">Los clientes mayores de 40 años obtienen beneficios VIP</div>
+            {% if form.age.errors %}
+                {% for error in form.age.errors %}
+                    <div class="message error">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">{{ form.email.label }} <span class="required">*</span></label>
+            {{ form.email }}
+            <div class="help-text">Debe ser único en el sistema</div>
+            {% if form.email.errors %}
+                {% for error in form.email.errors %}
+                    <div class="message error">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <button type="submit" class="btn">
+            💾 Crear Cliente
+        </button>
+    </form>
+</div>
+{% endblock %}

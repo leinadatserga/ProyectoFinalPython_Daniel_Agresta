@@ -1,0 +1,10 @@
+{% extends 'commerce/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Contraseña cambiada</h2>
+    <div class="alert alert-success">
+        ¡Tu contraseña ha sido cambiada exitosamente!<br><br><br>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-success">Volver al inicio</a>
+</div>
+{% endblock %}

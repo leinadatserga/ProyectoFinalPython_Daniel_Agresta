@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestor de e-commerce{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Gestor de e-commerce</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}" {% block nav_home %}{% endblock %}>Home</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'crear_cliente' %}" {% block nav_crear_cliente %}{% endblock %}>Crear Cliente</a></li>
+            <li><a href="{% url 'crear_producto' %}" {% block nav_crear_producto %}{% endblock %}>Crear Producto</a></li>
+            <li><a href="{% url 'busqueda' %}" {% block nav_buscar %}{% endblock %}>Buscar</a></li>
+            <li><a href="{% url 'administracion' %}" {% block nav_administracion_usuario %}{% endblock %}>Administrar
+                    usuario</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+            <li>
+                <span class="user-info">
+                    {{ user.email }}
+                    {% if user.avatar %}
+                    <img src="{{ user.avatar.url }}" alt="Avatar">
+                    {% endif %}
+                </span>
+            </li>
+            {% else %}
+            <li><a href="{% url 'login' %}" {% block nav_login %}{% endblock %}>Iniciar Sesión</a></li>
+            <li><a href="{% url 'registro' %}" {% block nav_registro %}{% endblock %}>Registrarse</a></li>
+            <li><a href="{% url 'about' %}" {% block nav_about %}{% endblock %}>Acerca del Gestor</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    <main>
+        {% if messages %}
+            <div style="margin-bottom: 2rem;">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4><strong>&copy; 2025 Daniel Agresta</strong> (todos los derechos reservados)</h4>
+                <p>Desarrollo final del sitio mediante Django para el curso de Python en Coderhouse. Conoce un poco más sobre el proyecto haciendo click en el ícono de GITHUB.</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/agresta" target="_blank" class="linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/agresta" target="_blank" class="twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/agresta" target="_blank" class="instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/leinadatserga/ProyectoFinalPython_Daniel_Agresta.git" target="_blank" class="github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

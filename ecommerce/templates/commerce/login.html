@@ -1,0 +1,66 @@
+{% extends 'commerce/base.html' %}
+{% load static %}
+
+{% block title %}Iniciar Sesión - E-commerce{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block nav_login %}class="active"{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>
+        <i class="fas fa-sign-in-alt"></i>
+        Iniciar Sesión
+    </h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">
+                <i class="fas fa-envelope"></i>
+                {{ form.email.label }}
+            </label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <div class="error-message">
+                    {% for error in form.email.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password.id_for_label }}">
+                <i class="fas fa-lock"></i>
+                {{ form.password.label }}
+            </label>
+            {{ form.password }}
+            {% if form.password.errors %}
+                <div class="error-message">
+                    {% for error in form.password.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Iniciar Sesión
+        </button>
+    </form>
+
+    <div class="auth-links">
+        <p>¿No tienes cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a></p>
+        <a href="{% url 'home' %}">
+            <i class="fas fa-arrow-left"></i>
+            Volver al Inicio
+        </a>
+    </div>
+</div>
+{% endblock %}

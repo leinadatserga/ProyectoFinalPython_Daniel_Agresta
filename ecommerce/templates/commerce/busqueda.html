@@ -1,0 +1,152 @@
+{% extends 'commerce/base.html' %}
+{% load static %}
+
+{% block title %}Búsqueda - Sistema E-commerce{% endblock %}
+
+{% block nav_buscar %}class="active"{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <h1><i class="fas fa-search icon"></i>Búsqueda de Clientes y Productos</h1>
+    
+    <!-- Formulario de búsqueda -->
+    <form method="GET" class="search-form">
+        <div class="search-input-group">
+            <input 
+                type="text" 
+                name="q" 
+                value="{{ query }}" 
+                placeholder="Ingresa tu búsqueda..."
+                class="search-input"
+                autocomplete="off"
+            >
+            <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+        </div>
+        
+        <div class="search-filters">
+            <label><strong>Buscar en:</strong></label>
+            <div class="filter-option">
+                <input type="radio" name="tipo" value="todos" id="todos" 
+                       {% if tipo_busqueda == 'todos' or not tipo_busqueda %}checked{% endif %}>
+                <label for="todos">Todos</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="tipo" value="clientes" id="clientes" 
+                       {% if tipo_busqueda == 'clientes' %}checked{% endif %}>
+                <label for="clientes">Solo Clientes</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="tipo" value="productos" id="productos" 
+                       {% if tipo_busqueda == 'productos' %}checked{% endif %}>
+                <label for="productos">Solo Productos</label>
+            </div>
+        </div>
+    </form>
+    
+    <!-- Resultados -->
+    {% if query %}
+        <div class="results-section">
+            {% if clientes or productos %}
+                <div class="stats">
+                    <div class="stats-item">
+                        <i class="fas fa-users"></i>
+                        {{ total_clientes }} cliente{{ total_clientes|pluralize }}
+                    </div>
+                    <div class="stats-item">
+                        <i class="fas fa-box"></i>
+                        {{ total_productos }} producto{{ total_productos|pluralize }}
+                    </div>
+                    <div class="stats-item">
+                        <i class="fas fa-chart-bar"></i>
+                        Total: {{ total_clientes|add:total_productos }} resultado{{ total_clientes|add:total_productos|pluralize }}
+                    </div>
+                </div>
+                
+                <!-- Clientes encontrados -->
+                {% if clientes %}
+                    <div class="results-header">
+                        <i class="fas fa-users"></i> Clientes Encontrados ({{ total_clientes }})
+                    </div>
+                    <div class="results-content">
+                        {% for cliente in clientes %}
+                            <div class="result-item">
+                                <div class="result-type cliente">CLIENTE</div>
+                                <div class="result-title">{{ cliente.name }}</div>
+                                <div class="result-details">
+                                    <strong>Email:</strong> {{ cliente.email }}<br>
+                                    <strong>Edad:</strong> {{ cliente.age }} años<br>
+                                    <strong>Tipo:</strong> 
+                                    {% if cliente.age > 40 %}
+                                        <span style="color: #ffc107; font-weight: bold;">
+                                            <i class="fas fa-crown"></i> VIP
+                                        </span>
+                                    {% else %}
+                                        Regular
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <!-- Productos encontrados -->
+                {% if productos %}
+                    <div class="results-header" style="margin-top: 20px;">
+                        <i class="fas fa-box"></i> Productos Encontrados ({{ total_productos }})
+                    </div>
+                    <div class="results-content">
+                        {% for producto in productos %}
+                            <div class="result-item">
+                                <div class="result-type producto">PRODUCTO</div>
+                                <div class="result-title">{{ producto.nombre }}</div>
+                                <div class="result-details">
+                                    <strong>Precio:</strong> ${{ producto.precio }}<br>
+                                    <strong>Stock:</strong> {{ producto.stock }} unidades<br>
+                                    {% if producto.descripcion %}
+                                        <strong>Descripción:</strong> {{ producto.descripcion }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="no-results">
+                    <i class="fas fa-search" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intenta con diferentes términos de búsqueda o revisa la ortografía.</p>
+                    <div style="margin-top: 20px;">
+                        <strong>Sugerencias:</strong>
+                        <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+                            <li>Busca por nombre de cliente o email</li>
+                            <li>Busca por nombre o descripción de producto</li>
+                            <li>Usa términos más generales</li>
+                            <li>Verifica que existan datos cargados</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="no-results">
+            <i class="fas fa-search" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
+            <h3>Realiza una búsqueda</h3>
+            <p>Ingresa un término en el campo de búsqueda para encontrar clientes y productos.</p>
+            <div style="margin-top: 20px;">
+                <strong>Puedes buscar:</strong>
+                <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+                    <li><strong>Clientes:</strong> Por nombre o email</li>
+                    <li><strong>Productos:</strong> Por nombre o descripción</li>
+                    <li><strong>Ambos:</strong> Seleccionando "Todos"</li>
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

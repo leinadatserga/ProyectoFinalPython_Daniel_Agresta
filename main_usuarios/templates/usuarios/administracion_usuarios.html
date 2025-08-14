@@ -1,0 +1,38 @@
+{% extends 'commerce/base.html' %}
+{% load static %}
+
+{% block title %}Administración de Usuario - Sistema E-commerce{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/administracion_usuarios.css' %}">
+{% endblock %}
+
+{% block nav_administracion_usuario %}class="active"{% endblock %}
+
+{% block content %}
+<div class="user-admin-container">
+    <h2>Administración de usuario</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            {{ form.email.label_tag }}<br>
+            {{ form.email }}
+            {{ form.email.errors }}
+        </p>
+        <p>
+            {{ form.avatar.label_tag }}<br>
+            {{ form.avatar }}
+            {{ form.avatar.errors }}
+        </p>
+        <button type="submit">Guardar cambios</button>
+    </form>
+    <div class="cambiar-contrasena-link" style="margin-top: 1.5em;">
+        <a href="{% url 'cambiar_contrasena' %}" class="btn btn-warning">Cambiar contraseña</a>
+    </div>
+    <form method="post" action="{% url 'eliminar_usuario' %}">
+        {% csrf_token %}
+        <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta?');">Darse de baja</button>
+    </form>
+</div>
+{% endblock %}
+

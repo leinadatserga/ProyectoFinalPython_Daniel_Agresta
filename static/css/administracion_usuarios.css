@@ -1,0 +1,90 @@
+/* 
+ * Estilos para administración de usuarios
+ */
+
+
+.user-admin-container input {
+    width: 420px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #bfc9d1;
+    margin-bottom: 0.5rem;
+}
+
+.user-admin-container .clearable-file-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.user-admin-container .clearable-file-input label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.user-admin-container label {
+    max-width: fit-content;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.user-admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.user-admin-container p {
+    margin-bottom: 1.2rem;
+}
+
+.user-admin-container h2 {
+    margin-bottom: 20px;
+}
+
+.user-admin-container form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.user-admin-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-admin-container button:hover {
+    background-color: #125ea2;
+}
+
+.user-admin-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.user-admin-container label[for*="clear_id"] {
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    margin: 0 0.5rem 0 0;
+    font-weight:bold;
+    font-size: 1rem;
+}

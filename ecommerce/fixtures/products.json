@@ -1,0 +1,290 @@
+[
+  {
+    "model": "ecommerce.producto",
+    "pk": 1,
+    "fields": {
+      "nombre": "Cámara IP360",
+      "precio": "350.00",
+      "descripcion": "Recomendada para hogar o pequeños comercios. Integra un sensor de video Full HD, que brinda imagenes claras y coloridas. Su giro de 355° en la horizontal e inclinación de 90° en la vertical cubre practicamente la totalidad del espacio donde se encuentre. Su función de seguimiento inteligente (Smart Tracking), se fija sobre personas u objetos en movimiento siguiéndolos automáticamente y notificándote de forma inmediata al celular. Utiliza notificaciones PUSH (requiere la APP IMOU), la puedes visualizar no solo desde tu smart phone, también desde PC instalando para tener completo control de los momentos en que deseas grabar o no, gracias a la función de privacidad.",
+      "stock": 30,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 2,
+    "fields": {
+      "nombre": "Cámara luminaria",
+      "precio": "320.00",
+      "descripcion": "Resolución de 1080P. 2 Proyectores led de alta luminosidad. Sistema de disuasión activa inteligente. Detección PIR. Conversación bidireccional. Clasificación IP65 resistente a la intemperie. Conexión de red WiFi, 2x2 MIMO. Almacenamiento en la nube.",
+      "stock": 50,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 3,
+    "fields": {
+      "nombre": "Cámara ojo de pez",
+      "precio": "450.00",
+      "descripcion": "Sensor 1/1.7\" 12Megapixel progressive scan STARVIS™ CMOS. Compresión H.265/H.264 triple-stream encoding. Velocidad de grabación max 25fps@12M(4000x3000). Multiple dewarped Mode. Day/Night(ICR), 3DNR, AWB, AGC, BLC. Smart detection. Intelligent Function. Distancia de iluminación nocturna Max. IR LEDs length 10m. Grabación en tarjeta Micro SD memory, IP67, IK10, PoE",
+      "stock": 20,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 4,
+    "fields": {
+      "nombre": "Cámara térmica",
+      "precio": "590.00",
+      "descripcion": "Tecnología de sensor térmico no refrigerado VOx de 300 x 400. Lente Atermalizada, Sin Enfoque. Lente térmica fija de 13 mm. Sensibilidad térmica ≤ 40 mK. Sensor 1 / 2.8 pulg. Sensor CMOS de escaneo progresivo de 2 MP. Lente fija de 8 mm. Distancia máxima de IR 35 m (114 pies). Características del sistema: Alarma activa, Admite ROI, detección de movimiento y paletas de colores, Distancia de potencia y transmisión de datos mejorada (ePoE), Protección de entrada IP67",
+      "stock": 18,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 5,
+    "fields": {
+      "nombre": "Cámara disuación",
+      "precio": "360.00",
+      "descripcion": "Imágenes en color las 24 horas del día, los 7 días de la semana. Disuasión activa con luz azul roja, sirena e interfaz de salida de alarma. Globo ocular de instalación rápida que ahorra tiempo de instalación. Velocidad de grabación Máx. 20 fps@5MP. Lente fija de 2,8 mm (3,6 mm opcional). Distancia de iluminación infrarroja de 40m. Clasificación IP67, 12 V ± 30 % CC",
+      "stock": 38,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 6,
+    "fields": {
+      "nombre": "Cámara domo",
+      "precio": "300.00",
+      "descripcion": "Formato Domo con sistema IP y conectividad WiFi. Resolución max 2MP@25ips. Codificación Smart H.265+. Filtro ICR. 0,025/0,0025 lux. Iluminación nocturna Smart IR 30 metros. Óptica con lente de 2,8 mm. Balance de blancos WDR digital, 3D-DNR. Ranura para tarjeta MicroSD, conexiones RJ45 y WiFi. Soporte para protocolo Onvif. Clasificación IP67, IK10",
+      "stock": 30,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 7,
+    "fields": {
+      "nombre": "Cámara PTZ IP wifi",
+      "precio": "250.00",
+      "descripcion": "Sensor CMOS STARVIS™ de 1/2,8 y 5 megapíxeles. Grabación de hasta Máx. 20 fps a 5 MP. Detección humana inteligente incorporada con algoritmos de última generación. Cable trampa, sistema exclusivo contra intrusión. Codificación H.265. Conectividad Wi-Fi. Audio bidireccional. Alarma de disuación con luz y sonido. Iluminación IR y luz blanca, tres modos de visión nocturna. Clasificación de protección IP66.",
+      "stock": 40,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 8,
+    "fields": {
+      "nombre": "Cámara IP PTZ",
+      "precio": "220.00",
+      "descripcion": "Monitoreo inteligente, detección humana con IA. La potente tecnología de procesamiento de imágenes encuentra rápidamente objetivos humanos, lo que le permite controlar lo que importa sin recibir alertas falsas molestas. Video 1080P Full HD y compresión H.265. El sensor 1080P y los algoritmos IR avanzados brindan video nítido tanto de día como de noche. La compresión H.265 de vanguardia reduce el ancho de banda de red y el uso de almacenamiento en un 50% con la misma calidad de video. Gire la cámara para ver cada rincón de su hogar para que no haya puntos ciegos. Seguimiento inteligente. Modo de privacidad. Sirena incorporada. Alertas por sonido anormal. Audio bidireccional.",
+      "stock": 50,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 9,
+    "fields": {
+      "nombre": "NVR 8ch",
+      "precio": "120.00",
+      "descripcion": "Decodificación de códec H.264 + / H.264. Ancho de banda entrante máximo de 80 Mbps. Resolución de hasta 5MP para vista previa y reproducción. Salida de video simultánea HDMI / VGA. Admite la tecnología ANR para mejorar la confiabilidad del almacenamiento cuando la red se cae.",
+      "stock": 21,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 10,
+    "fields": {
+      "nombre": "NVR 16ch",
+      "precio": "200.00",
+      "descripcion": "Smart H.265+/H.265/Smart H.264+/H.264. Max 200Mbps Incoming Bandwidth. Up to 8MP Resolution for Preview and Playback. Up to 2ch@4K/8ch@1080P decoding. HDMI/VGA simultaneous video output. Support IPC UPnP, 16PoE ports.",
+      "stock": 25,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 11,
+    "fields": {
+      "nombre": "NVR 32ch",
+      "precio": "230.00",
+      "descripcion": "32CH Tecnología 4K hasta 12MP. 2U H.264 256Mbps. HDMI, VGA, BNC. Audio: 1 entrada/1 salida. Alarma: 16 entradas/4 salidas. 2 puertos USB, RS232, RS485. Tecnología P2P. Conexión remota por medio de Modem 3G (Internet Móvil). 1 puerto e-Sata (16TB). Soporta 4 HDD SATA de Hasta 4TB.",
+      "stock": 20,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 12,
+    "fields": {
+      "nombre": "DVR 16ch",
+      "precio": "220.00",
+      "descripcion": "Compresión de video de doble flujo H.265 + / H.265. Admite codificación AI de canal completo. Admite entradas de video HDCVI / AHD / TVI / CVBS / IP. Entradas de cámara IP de 18 canales como máximo, cada canal hasta 6MP; Ancho de banda entrante máximo de 64 Mbps. Larga distancia de transmisión por cable coaxial. Hasta 8 canales de flujo de video (canal analógico) SMD Plus.",
+      "stock": 22,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 13,
+    "fields": {
+      "nombre": "DVR 32ch",
+      "precio": "250.00",
+      "descripcion": "Acceso a video IP de 8/16/32 canales. Smart H.265 + / Smart H.264 + / H.265 / H.264 / MJPEG; Detector magnético H.265. Ancho de banda entrante máximo de 320 Mbps. Resolución de hasta 24MP para visualización en vivo y reproducción. Corrección de distorsión de ojo de pez de 1 canal (AI por NVR). AI por cámara: protección perimetral; detección y reconocimiento de rostros; SMD Plus; metadatos de video; ANPR; contando personas; estereoanálisis; distribución de masas; mapa de calor.",
+      "stock": 17,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 14,
+    "fields": {
+      "nombre": "Cables UTP/FTP",
+      "precio": "32.00",
+      "descripcion": "Cable UTP cat.6 en presentación bobina de 305 mts.",
+      "stock": 60,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 15,
+    "fields": {
+      "nombre": "Coaxil/+pw",
+      "precio": "37.00",
+      "descripcion": "Tipo RG-59 resistente a la intemperie con proteccion UV. Presentación en rollo de 200 mts.",
+      "stock": 50,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 16,
+    "fields": {
+      "nombre": "Terminales RJ-45",
+      "precio": "2.80",
+      "descripcion": "Exelente calidad, cat.6 con baño de oro. Presentación en sobres con 10 unidades.",
+      "stock": 1000,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 17,
+    "fields": {
+      "nombre": "Conectores BNC",
+      "precio": "0.30",
+      "descripcion": "Fácil colocación por compresión. Revestimiento anti corrosión. Presentación en sobre con 2 unidades m/h.",
+      "stock": 1000,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 18,
+    "fields": {
+      "nombre": "Enchufes T/National",
+      "precio": "0.20",
+      "descripcion": "Ideal para instalaciones y reposiciones en CCTV. Presentación en sobre con 2 unidades m/h.",
+      "stock": 1000,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 19,
+    "fields": {
+      "nombre": "Balunes",
+      "precio": "1.20",
+      "descripcion": "Rápida conexión por presión sin tornillos. Tipo pasivo con alcance hasta 100 mts. Presentación en sobre con 2 unidades m/h.",
+      "stock": 200,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 20,
+    "fields": {
+      "nombre": "Monitores",
+      "precio": "125.00",
+      "descripcion": "Carcasa de plástico liviana y resistente. Admite operación 24-7. Procesamiento digital para un video brillante y vívido. Tiempo de respuesta rápido sin imágenes borrosas ni fantasmas. Bajo consumo de energía, larga vida útil.",
+      "stock": 12,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 21,
+    "fields": {
+      "nombre": "Fuentes",
+      "precio": "11.00",
+      "descripcion": "Fuente de alimentación tipo switch de 12V-5A con 4 bornes para un uso versátil. Incluye cable de alimentación 110/220v.",
+      "stock": 34,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 22,
+    "fields": {
+      "nombre": "Racks",
+      "precio": "130.00",
+      "descripcion": "Rack 6U de 60 cm de ancho por 55 cm de profundidad y 65,8 cm de altura, con puerta delantera de vidrio con llave de seguridad, laterales desmontables y ranuras de ventilación. Color: Negro.",
+      "stock": 23,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 23,
+    "fields": {
+      "nombre": "Routers",
+      "precio": "969.00",
+      "descripcion": "WiFi 6 de alta eficiencia: WiFi 6 ultrarrápido tribanda aumenta las velocidades hasta 11 000 Mbps, con canales de 160 MHz para una mejor eficiencia y rendimiento. Cobertura ampliada: el exclusivo ASUS RangeBoost Plus mejora el alcance de la señal y la cobertura general. Puertos de red flexibles: se puede configurar un puerto 2.5G y un puerto 10G para operación WAN o LAN.",
+      "stock": 10,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "ecommerce.producto",
+    "pk": 24,
+    "fields": {
+      "nombre": "Herramientas",
+      "precio": "13.00",
+      "descripcion": "Pinzas de punta fina-recta en cromo-vanadio de gran dureza y durabilidad. Mangos antideslizantes con aislación para 1000v. Color: único naranja y amarillo.",
+      "stock": 40,
+      "activo": true,
+      "created_at": "2025-01-01T10:00:00Z"
+    }
+  }
+]

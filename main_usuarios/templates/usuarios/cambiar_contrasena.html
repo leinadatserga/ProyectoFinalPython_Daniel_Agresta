@@ -1,0 +1,16 @@
+{% extends 'commerce/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Cambiar contraseña</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+    </form>
+</div>
+{% endblock %}
