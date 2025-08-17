@@ -1,5 +1,10 @@
 {% extends 'commerce/base.html' %}
+{% load static %}
 {% block title %}Borrar Cliente{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/borrar_cliente.css' %}">
+{% endblock %}
 
 {% block content %}
 <h2>¿Estás seguro que deseas borrar este cliente?</h2>
@@ -9,7 +14,7 @@
 </ul>
 <form method="post">
     {% csrf_token %}
-    <button type="submit">Confirmar borrado</button>
-    <a href="{% url 'detalle_cliente' object.pk %}">Cancelar</a>
+    <button type="submit" class="btn-borrar">Confirmar borrado</button>
+    <a href="{% url 'detalle_cliente' object.pk %}" class="btn-cancelar">Cancelar</a>
 </form>
 {% endblock %}

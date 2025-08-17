@@ -1,0 +1,35 @@
+/* Estilos para Editar cliente */
+
+.form-editar-cliente {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.form-editar-cliente label {
+    font-weight: bold;
+    margin-top: 1em;
+    display: block;
+}
+.form-editar-cliente input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-editar-cliente button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.form-editar-cliente button:hover {
+    background: #0056b3;
+}

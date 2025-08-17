@@ -1,0 +1,32 @@
+/* Estilos para Borrar Cliente */
+
+.btn-borrar {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.btn-borrar:hover {
+    background: #a71d2a;
+}
+
+.btn-cancelar {
+    background: #28a745;
+    color: #fff !important;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 8px;
+    transition: background 0.2s;
+    display: inline-block;
+}
+.btn-cancelar:hover {
+    background: #1e7e34;
+}
