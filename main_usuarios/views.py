@@ -117,8 +117,8 @@ def logout_view(request):
         - Eliminación completa de datos de sesión.
         - No exposición de información sensible.
     """
-    username = request.session.get('username', 'Usuario')
-    
+    username = request.user.get_username() if request.user.is_authenticated else 'Usuario'
+
     request.session.flush()
     
     messages.info(request, f'¡Hasta luego {username}! Has cerrado sesión correctamente.')

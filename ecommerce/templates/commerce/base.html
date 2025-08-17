@@ -22,8 +22,8 @@
         <ul>
             <li><a href="{% url 'home' %}" {% block nav_home %}{% endblock %}>Home</a></li>
             {% if user.is_authenticated %}
-            <li><a href="{% url 'crear_cliente' %}" {% block nav_crear_cliente %}{% endblock %}>Crear Cliente</a></li>
-            <li><a href="{% url 'crear_producto' %}" {% block nav_crear_producto %}{% endblock %}>Crear Producto</a></li>
+            <li><a href="{% url 'crear_cliente' %}" {% block nav_crear_cliente %}{% endblock %}>Cliente</a></li>
+            <li><a href="{% url 'crear_producto' %}" {% block nav_crear_producto %}{% endblock %}>Producto</a></li>
             <li><a href="{% url 'busqueda' %}" {% block nav_buscar %}{% endblock %}>Buscar</a></li>
             <li><a href="{% url 'administracion' %}" {% block nav_administracion_usuario %}{% endblock %}>Administrar
                     usuario</a></li>

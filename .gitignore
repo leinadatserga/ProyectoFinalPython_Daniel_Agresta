@@ -214,3 +214,4 @@ __marimo__/
 
 # Archivos de staticfiles de Django
 staticfiles/
+media/

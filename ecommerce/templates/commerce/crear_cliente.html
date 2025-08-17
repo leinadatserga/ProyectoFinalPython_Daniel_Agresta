@@ -13,6 +13,7 @@
 {% block content %}
 <div class="form-container">
     <h2>➕ Crear Nuevo Cliente</h2>
+    <a href="{% url 'listar_clientes' %}" class="btn btn-secondary" style="margin-bottom: 1em;">Ver Listado de Clientes</a>
     
     <form method="post">
         {% csrf_token %}

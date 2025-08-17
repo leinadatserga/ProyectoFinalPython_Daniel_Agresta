@@ -4,6 +4,9 @@ from django.db.models import Q
 from .forms import formularioCliente, formularioProductos
 from .models import Cliente, Producto
 from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
@@ -175,3 +178,25 @@ def busqueda(request):
 
 def about(request):
     return render(request, 'commerce/about.html')
+
+
+class ClienteListView(LoginRequiredMixin, ListView):
+    model = Cliente
+    template_name = 'commerce/listar_clientes.html'
+    context_object_name = 'clientes'
+
+class ClienteDetailView(LoginRequiredMixin, DetailView):
+    model = Cliente
+    template_name = 'commerce/detalle_cliente.html'
+    context_object_name = 'cliente'
+
+class ClienteUpdateView(LoginRequiredMixin, UpdateView):
+    model = Cliente
+    fields = ['name', 'age', 'email']
+    template_name = 'commerce/editar_cliente.html'
+    success_url = reverse_lazy('listar_clientes')
+
+class ClienteDeleteView(LoginRequiredMixin, DeleteView):
+    model = Cliente
+    template_name = 'commerce/borrar_cliente.html'
+    success_url = reverse_lazy('listar_clientes')

@@ -1,0 +1,15 @@
+{% extends 'commerce/base.html' %}
+{% block title %}Borrar Cliente{% endblock %}
+
+{% block content %}
+<h2>¿Estás seguro que deseas borrar este cliente?</h2>
+<ul>
+    <li><strong>Nombre:</strong> {{ object.name }}</li>
+    <li><strong>Email:</strong> {{ object.email }}</li>
+</ul>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar borrado</button>
+    <a href="{% url 'detalle_cliente' object.pk %}">Cancelar</a>
+</form>
+{% endblock %}
