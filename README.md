@@ -55,6 +55,8 @@ ProyectoFinal_Daniel_Agresta/
 │   ├── base.css
 │   ├── auth.css
 │   ├── forms.css
+│   ├── detalle_cliente.css
+│   ├── listar_clientes.css
 │   ├── home.css
 │   ├── administracion_usuarios.css
 │   ├── about.css
