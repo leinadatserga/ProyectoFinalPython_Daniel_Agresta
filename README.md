@@ -1,3 +1,5 @@
+VIDEO DEMOSTRATIVO: https://drive.google.com/drive/folders/198tupM4VcN13Ev0YRM5sq4Pofj69cmb3?usp=drive_link
+
 # Sistema Gestor de E-commerce en Django
 
 Un sistema integral de gestión de clientes y productos desarrollado con Django 5.2, que incluye autenticación personalizada, búsqueda avanzada y sistema VIP para clientes.
